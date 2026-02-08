@@ -16,6 +16,10 @@ const ResponseSchema = new mongoose.Schema({
 
 const Response = mongoose.model("Response", ResponseSchema);
 
+app.get("/yes", (req, res) => {
+  res.send("YES route is working 🚀");
+});
+
 app.post("/yes", async (req, res) => {
   const newResponse = new Response({
     answer: "Yes",
